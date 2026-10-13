@@ -262,28 +262,29 @@
         value="mb">Megabytes (MB)</option>
          <option 
         value="gb">Gigabytes (GB)</option>
-
+         <option 
+        value="tb">Terabytes (TB)</option>
      </select>
     </div>
 
     <div class="unit-field">
         <label for="toStorage">To</label>
         <select id="toStorage" class="unit-select">
-        value="bytes">Bytes (B)</option>
-             <option 
-        value="kb">Kilobytes (KB)</option>
+            <option value="bytes">Bytes (B)</option>
+            <option value="kb">Kilobytes (KB)</option>
             <option value="mb" selected>Megabytes (MB)</option>
             <option value="gb">Gigabytes (GB) </option>
+            <option value="tb">Terabytes (TB)</option>
         </select>
     </div>
     </div>
    
-    <button class="swap-btn" type="button">
+    <button class="swap-btn" id="storageSwapBtn" type="button">
     <i data-lucide="arrow-left-right"></i>
     Swap Units
  </button>
 
- <button class="convert-btn" type="button">Convert</button>
+ <button class="convert-btn" id="storageConvertBtn" type="button">Convert</button>
 
  <div class="result">
     <p>Result</p>
