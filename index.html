@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="logo-icon">
+        <i data-lucide="arrow-left-right"></i>
+        </div>
+        <h1> Converter</h1>
+        <p>Simple, accurate conversions in one place</p>
+    </header>
+    <main>
+        <!---CATEGORY CARDS HERE-->
+        <section class="category-box">
+            <button class="category-time"
+            data-category="time">
+        <i data-lucide="clock"></i>
+        <span class="category-name">Time</span>
+        <span class="category-description">Convert seconds, minutes, hours.</span>
+        <i data-lucide="chevron-right"></i>
+        </button>
+       
+        <button class="category-temp"
+            data-category="temp">
+        <i data-lucide="thermometer"></i>
+         <span class="category-name">Temperature</span>
+        <span class="category-description">Convert Celsius, Fahrenheit, and Kelvin.</span>
+        <i data-lucide="chevron-right"></i>
+        </button>
+
+        <button class="category-data-transfer"
+            data-category="transfer">
+        <i data-lucide="activity"></i>
+         <span class="category-name">Data Transfer</span>
+        <span class="category-description">Convert bps, kbps, mbps,gbps.</span>
+        <i data-lucide="chevron-right"></i>
+        </button>
+
+       <button class="category-data-storage"
+            data-category="storage">
+        <i data-lucide="database"></i>
+         <span class="category-name">Data Storage</span>
+        <span class="category-description">Convert bytes, KB, MB, GB.</span>
+        <i data-lucide="chevron-right"></i>
+        </button>
+        </section>
+ <!--CONVERTeR PAGE -->
+ <section class="converter" id ="converter">
+
+ <!--HOME BUTTON -->
+ <button class="home-btn" id="homeBtn" type="button">
+    <i data-lucide="arrow-left"></i>
+    Home
+ </button>
+ <!--CONVERTeR HEADER/TITLE -->
+ <div class="converter-header">
+    <div class="converter-icon">
+        <i data-lucide="clock" id="converterIcon"></i>
+    </div>
+    <!---TIME CONVERTER-->
+    <h2 id="converterTitle">Time Converter</h2>
+    <p id="converterDescription">Convert between seconds,minutes,hours and more </p>
+ </div>
+
+ <!--INPUT VALUES -->
+ <label for="inputValue">Value</label>
+ <input 
+        type="number"
+        id="timeValue"
+        class="input"
+        placeholder="Enter a value"
+        step ="any" 
+>
+ <!-- FROM AND TO DROP DOWN -->
+  <div class="unit-selection">
+    <div class="unit-field">
+        <label for="timeFrom">From</label>
+     <select id="timeFrom" class="unit-select">
+        <option 
+        value="seconds">Seconds(s)</option>
+         <option 
+        value="minutes">Minutes(min)</option>
+         <option 
+        value="hours">Hours(h)</option>
+     </select>
+    </div>
+    <div class="unit-field">
+        <label for="timeTo">To</label>
+        <select id="timeTo" class="unit-select">
+            <option
+            value="seconds">Seconds(s)</option>
+            <option value="minutes" selected>Minutes(min)</option>
+            <option value="hours">Hours(h)</option>
+        </select>
+    </div>
+    </div>
+
+ <!--SWAP UNITS BUTTON-->
+ <button class="swap-btn" id="timeSwapBtn" type="button">
+    <i data-lucide="arrow-left-right"></i>
+    Swap Units
+ </button>
+ <!-- CONVERT BUTTON -->
+  <button class="convert-btn" id="timeConvertBtn" type= "button">Convert</button>
+
+  <!--RESULTS DISPLAY -->
+  <div class="result">
+    <p>Result</p>
+    <output id="timeResult" aria-live="polite">The results will appear here</output>
+  </div>
+
+  </section>
+  <!-------TEMPERATURE CONVERTER------->
+  <section class="converter category-temp" id="temp">
+   
+<button class="home-btn" id="homeBtn" type="button">
+    <i data-lucide="arrow-left"></i>
+    Home
+ </button>
+   
+    <h2> Temperature Converter</h2>
+
+  <label for="tempValue">Value</label>
+ <input 
+        type="number"
+        id="tempValue"
+        class="input"
+        placeholder="Enter a value"
+        step ="any" 
+        >
+       <div class="unit-selection">
+    <div class="unit-field">
+        <label for="fromTemp">From</label>
+     <select id="fromTemp" class="unit-select">
+        <option 
+        value="celsius">Celsius</option>
+         <option 
+        value="fahrenheit">Fahrenheit</option>
+         <option 
+        value="kelvin">Kelvin</option>
+     </select>
+    </div>
+
+    <div class="unit-field">
+        <label for="toTemp">To</label>
+        <select id="toTemp" class="unit-select">
+            <option
+            value="celsius">Celsius</option>
+            <option value="fahrenheit" selected>Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+    </div>
+    </div>
+   
+    <button class="swap-btn" id="tempSwapBtn" type="button">
+    <i data-lucide="arrow-left-right"></i>
+    Swap Units
+ </button>
+
+ <button class="convert-btn" id="tempConvertBtn" type="button">Convert</button>
+
+ <div class="result">
+    <p>Result</p>
+    <output id="tempResult" aria-live="polite">The results will appear here</output>
+  </div>
+ </section>
+
+  <!-------DATA TRANSFER CONVERTER------>
+  <section class="converter category-data-transfer" id="transfer">
+    
+<button class="home-btn" id="homeBtn" type="button">
+    <i data-lucide="arrow-left"></i>
+    Home
+ </button>
+    
+    <h2> Data Transfer Converter</h2>
+
+  <label for="transferValue">Value</label>
+ <input 
+        type="number"
+        id="transferValue"
+        class="input"
+        placeholder="Enter a value"
+        step="any" 
+        >
+       <div class="unit-selection">
+    <div class="unit-field">
+        <label for="fromTransfer">From</label>
+     <select id="fromTransfer" class="unit-select">
+        <option 
+        value="bps">Bits per second</option>
+         <option 
+        value="kbps">Kilobits per second</option>
+         <option 
+        value="mbps">Megabits per second</option>
+         <option 
+        value="gbps">Gigabits per second</option>
+
+     </select>
+    </div>
+
+    <div class="unit-field">
+        <label for="toTransfer">To</label>
+        <select id="toTransfer" class="unit-select">
+            <option
+            value="bps">bits per second</option>
+             <option 
+        value="kbps">Kilobits per second</option>
+            <option value="mbps" selected>Megabits per second</option>
+            <option value="gbps">Gigabits per second</option>
+        </select>
+    </div>
+    </div>
+   
+    <button class="swap-btn" id="TransferSwapBtn" type="button">
+    <i data-lucide="arrow-left-right"></i>
+    Swap Units
+ </button>
+
+ <button class="convert-btn" id="transferConvertBtn" type="button">Convert</button>
+
+ <div class="result">
+    <p>Result</p>
+    <output id="transferResult">The results will appear here</output>
+  </div>
+ </section>
+
+  <!--------STORAGE-SIZE-------->
+   <section class="converter category-data-storage" id="storage">
+    
+<button class="home-btn" id="homeBtn" type="button">
+    <i data-lucide="arrow-left"></i>
+    Home
+ </button>
+    
+    <h2> Data Storage Size Converter</h2>
+
+  <label for="storageValue">Value</label>
+ <input 
+        type="number"
+        id="storageValue"
+        class="input"
+        placeholder="Enter a value"
+        step="any" 
+        >
+       <div class="unit-selection">
+    <div class="unit-field">
+        <label for="fromStorage">From</label>
+     <select id="fromStorage" class="unit-select">
+        <option 
+        value="bytes">Bytes (B)</option>
+         <option 
+        value="kb">Kilobytes (KB)</option>
+         <option 
+        value="mb">Megabytes (MB)</option>
+         <option 
+        value="gb">Gigabytes (GB)</option>
+         <option 
+        value="tb">Terabytes (TB)</option>
+     </select>
+    </div>
+
+    <div class="unit-field">
+        <label for="toStorage">To</label>
+        <select id="toStorage" class="unit-select">
+            <option value="bytes">Bytes (B)</option>
+            <option value="kb">Kilobytes (KB)</option>
+            <option value="mb" selected>Megabytes (MB)</option>
+            <option value="gb">Gigabytes (GB) </option>
+            <option value="tb">Terabytes (TB)</option>
+        </select>
+    </div>
+    </div>
+   
+    <button class="swap-btn" id="storageSwapBtn" type="button">
+    <i data-lucide="arrow-left-right"></i>
+    Swap Units
+ </button>
+
+ <button class="convert-btn" id="storageConvertBtn" type="button">Convert</button>
+
+ <div class="result">
+    <p>Result</p>
+    <output id="storageResult">The results will appear here</output>
+  </div>
+ </section>
+    </main>
+
+    
+</body>
+</html>
