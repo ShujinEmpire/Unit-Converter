@@ -49,5 +49,3 @@ A web-based unit converter created for the CS 3350 mini-project.
 
    ```bash
    http://localhost:8000
-
-6. Scroll down and open the dir
