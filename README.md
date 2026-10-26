@@ -18,29 +18,36 @@ A web-based unit converter created for the CS 3350 mini-project.
 - JavaScript
 
 ## Requirements
-
+- GIT Installed, newest version preferred
 - A modern web browser
 - Internet connection for the Lucide icon library
 - Python 3 to run a local web browser
 
 ## How to Run
 
-1. Clone the repository:
+1. Initilize git in your terminal
+
+   ```bash
+   git init
+
+2. Clone the repository:
 
    ```bash
    git clone https://github.com/ShujinEmpire/Unit-Converter.git
 
-2. Enter the Unit_Converter repository:
+3. Enter the Unit_Converter repository:
    
    ```bash
    cd Unit-Converter
 
-3. Run the Python command to start a local server
+4. Run the Python command to start a local server
 
    ```bash
    python3 -m http.server 8000
 
-4. Then, in an internet browser, search:
+5. Then, in an internet browser, search:
 
    ```bash
    http://localhost:8000
+
+6. Scroll down and open the dir
